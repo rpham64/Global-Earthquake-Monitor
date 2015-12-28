@@ -83,26 +83,10 @@ public class AirportMap extends PApplet {
 			routeList.add(sl);
 		}
 		
-		// Airport information
-		// Returns {country="United States", altitude=0, code="OLT", 
-		// 			city="San Diego", name="San Diego Old Town Transit Center"}
-		/*for (Marker marker : airportList) {
-			System.out.println(marker.getProperties());
-		}*/
-		
-		// Routes information
-		// Returns coordinates [source, destination]
-		/*for (Marker marker : routeList) {
-			System.out.println(((SimpleLinesMarker) marker).getLocations());
-		}*/
-		
-		/*// [(55.409, 37.906), (55.606, 49.279)] = [source, dest]
-		SimpleLinesMarker test = (SimpleLinesMarker) routeList.get(5);
-		System.out.println(test.getLocation(1));*/
-		
 		//UNCOMMENT IF YOU WANT TO SEE ALL ROUTES
 		map.addMarkers(routeList);
 		
+		// Hide all route markers
 		for (Marker marker : routeList) {
 			marker.setHidden(true);
 		}
